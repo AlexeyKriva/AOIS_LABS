@@ -14,8 +14,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        boolean k = true;
-        while(k == true) {
+        boolean isAppRunning = true;
+        while(isAppRunning) {
             System.out.println("1 - операции над числами:\n2 - выход из программы");
             int n=scan.nextInt();
             switch(n) {
@@ -152,7 +152,7 @@ public class Main {
                     break;
 
                 case 2:
-                    k = false;
+                    isAppRunning = false;
                     break;
                 default:
                     System.out.println("Выберите либо 1, либо 2!!!");
@@ -611,7 +611,7 @@ public class Main {
         String integerPartX2 = findIntegerPart(x2);
         long num1 = fromStringToLong(integerPartX1);
         long num2 = fromStringToLong(integerPartX2);
-        return num1 >= num2 ? true : false;
+        return num1 >= num2;
     }
 
 
